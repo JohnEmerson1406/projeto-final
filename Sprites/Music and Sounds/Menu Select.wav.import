@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Menu Select.wav-3fc032485b9b4313efad2a57bcde9fa7.sample"
+
+[deps]
+
+source_file="res://Sprites/Music and Sounds/Menu Select.wav"
+dest_files=[ "res://.import/Menu Select.wav-3fc032485b9b4313efad2a57bcde9fa7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
