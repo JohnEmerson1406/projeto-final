@@ -22,7 +22,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 36, 37, 38, 39 ]
+"values": [ 43, 44, 45, 43 ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -142,7 +142,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 24, 25, 26, 27 ]
+"values": [ 43, 44, 45, 43 ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -196,7 +196,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 28, 29, 30, 31 ]
+"values": [ 31, 32, 33, 31 ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -301,7 +301,7 @@ tracks/0/keys = {
 "values": [ 6 ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=49]
 resource_name = "RollDown"
 length = 0.5
 tracks/0/type = "value"
@@ -314,7 +314,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 55, 56, 57, 58, 59 ]
+"values": [ 50, 51, 52, 54, 53 ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -344,7 +344,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 50, 51, 52, 53, 54 ]
+"values": [ 50, 51, 52, 54, 53 ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -361,7 +361,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=50]
 resource_name = "RollRight"
 length = 0.5
 tracks/0/type = "value"
@@ -374,7 +374,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 40, 41, 42, 43, 44 ]
+"values": [ 50, 51, 52, 54, 53 ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -391,7 +391,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=51]
 resource_name = "RollUp"
 length = 0.5
 tracks/0/type = "value"
@@ -404,7 +404,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 45, 46, 47, 48, 49 ]
+"values": [ 50, 51, 52, 54, 53 ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -421,7 +421,8 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=48]
+resource_name = "RunDown"
 length = 0.6
 loop = true
 step = 0.05
@@ -635,11 +636,12 @@ states/Run/node = SubResource( 37 )
 states/Run/position = Vector2( 303, 151 )
 transitions = [ "Idle", "Run", SubResource( 38 ), "Run", "Idle", SubResource( 39 ), "Idle", "Attack", SubResource( 40 ), "Attack", "Idle", SubResource( 41 ), "Idle", "Roll", SubResource( 42 ), "Roll", "Idle", SubResource( 43 ) ]
 start_node = "Idle"
-graph_offset = Vector2( -223.7, -3.56544 )
+graph_offset = Vector2( -223.7, 140.686 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=45]
 
 [sub_resource type="CapsuleShape2D" id=46]
+radius = 6.81249
 height = 12.0
 
 [node name="Player" type="KinematicBody2D"]
@@ -650,9 +652,10 @@ script = ExtResource( 2 )
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -8 )
 texture = ExtResource( 1 )
+flip_h = true
 vframes = 6
 hframes = 12
-frame = 24
+frame = 53
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.5708
@@ -667,11 +670,11 @@ anims/IdleDown = SubResource( 6 )
 anims/IdleLeft = SubResource( 7 )
 anims/IdleRight = SubResource( 8 )
 anims/IdleUp = SubResource( 9 )
-anims/RollDown = SubResource( 10 )
+anims/RollDown = SubResource( 49 )
 anims/RollLeft = SubResource( 11 )
-anims/RollRight = SubResource( 12 )
-anims/RollUp = SubResource( 13 )
-anims/RunDown = SubResource( 14 )
+anims/RollRight = SubResource( 50 )
+anims/RollUp = SubResource( 51 )
+anims/RunDown = SubResource( 48 )
 anims/RunLeft = SubResource( 15 )
 anims/RunRight = SubResource( 16 )
 anims/RunUp = SubResource( 47 )
@@ -694,8 +697,11 @@ collision_mask = 2147483648
 script = ExtResource( 4 )
 
 [node name="CollisionShape2D" parent="SwordHitboxPosition/SwordHitbox" index="0"]
-position = Vector2( 0, 17 )
+modulate = Color( 0.972549, 0.956863, 0.956863, 1 )
+self_modulate = Color( 0.984314, 0.968627, 0.968627, 1 )
+position = Vector2( 0, 5 )
 rotation = 1.5708
 shape = SubResource( 46 )
+disabled = true
 
 [editable path="SwordHitboxPosition/SwordHitbox"]
